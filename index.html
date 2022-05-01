@@ -1,0 +1,97 @@
+<head>
+    <title>Album</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="action-bar">
+        <span purpose="saveAlbum" class="material-icons">
+            <img src="icons/saveAlbum.png" id="" alt="" srcset="">
+        </span>
+        <span purpose="addAlbum" class="material-icons">
+            <img src="icons/addAlbum.png" id="" alt="" srcset="">
+
+        </span>
+        <span purpose="deleteAlbum" class="material-icons">
+            <img src="icons/deleteAlbum.png" id="" alt="" srcset="">
+
+        </span>
+        <span purpose="importAlbum" class="material-icons">
+            <img src="icons/uploadAlbum.png" id="" alt="" srcset="">
+        </span>
+
+        <span purpose="exportAlbum" class="material-icons">
+            <img src="icons/downloadAlbum.png" id="" alt="" srcset="">
+
+        </span>
+        <span purpose="playAlbum" class="material-icons">
+            <img src="icons/playAlbum.png" id="" alt="" srcset="">
+        </span>
+        <select id="selectAlbum">
+            <option value="-1">Select a Album</option>
+        </select>
+        <input type="file" id="uploadAlbum" name="myfile" style="display: none;">
+    </div>
+    <div id="content">
+        <div id="content-list">
+            <div id="newSlide">New Slide</div>
+            <div id="slideList">
+            </div>
+        </div>
+        <div id="content-view">
+
+        </div>
+        <div id="content-viewOverlay">
+            <text purpose="content-viewOverlayText">Create New Slide
+                or Choose a Slide</text>
+        </div>
+        <div id="content-viewOverlayPlay">
+
+
+        </div>
+    </div>
+    <div id="contentOverlay">
+        <text purpose="contentOverlayText">Select Album First</text>
+    </div>
+    <template id="pageTemp">
+        <option id="selectAlbumTemp" val="-1"></option>
+        <div id="slideTemp">
+            <div id="slideTitle">
+            </div>
+            <div id="slideContent">
+                <div id="slideText"></div>
+                <img id="slideImg" src="" alt="">
+            </div>
+        </div>
+        <div id="slideTempinView">
+            <div id="slideTitle">
+                <div id="slideName"></div>
+
+                <span id="slideEdit" class="material-icons">
+                    <img src="icons/editSlide.png" alt="" srcset="">
+                </span>
+                <span id="slideDelete" class="material-icons">
+                    <img src="icons/deleteSlide.png" alt="" srcset="">
+                </span>
+            </div>
+            <div id="slideContent">
+                <div id="slideText"></div>
+                <!-- <p id="slideText"></p> -->
+                <img id="slideImg" src="" alt="">
+            </div>
+        </div>
+        <div id="newSlideTemp">
+            <input type="text" id="slideName" placeholder="Enter Slide Title...">
+            <input type="text" id="slideImg" placeholder="Enter Slide Image...">
+            <!-- <textarea ></textarea> -->
+            <textarea id="slideDescription" cols="30" rows="10" placeholder="Enter Slide Description..."></textarea>
+            <button id="saveSlide">Save</button>
+
+        </div>
+    </template>
+    <script src="album.js"></script>
+</body>
+
+</html>
